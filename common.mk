@@ -20,7 +20,6 @@ COMMON_PATH := device/samsung/universal2100-common
 $(call inherit-product, vendor/samsung/universal2100-common/universal2100-common-vendor.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 30
-BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 PRODUCT_BUILD_SUPER_PARTITION := false
