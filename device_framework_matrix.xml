@@ -9,11 +9,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.nfc</name>
+        <name>vendor.samsung.hardware.nfc</name>
         <transport>hwbinder</transport>
-        <version>1.2</version>
+        <version>2.0</version>
         <interface>
-            <name>INfc</name>
+            <name>ISehNfc</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -23,22 +23,6 @@
         <version>2.0</version>
         <interface>
             <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.nxpese</name>
-        <version>1.0</version>
-        <interface>
-            <name>INxpEse</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.nxpnfc</name>
-        <version>2.0</version>
-        <interface>
-            <name>INxpNfc</name>
             <instance>default</instance>
         </interface>
     </hal>
