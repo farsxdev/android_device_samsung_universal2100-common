@@ -9,13 +9,6 @@ genfscon debugfs /ion                                                           
 genfscon debugfs /mali0/gpu_memory                                                                                                   u:object_r:debugfs_gpu_memory:s0
 
 ####################################
-# Procfs
-#
-
-genfscon proc /sys/vm/dirty_bytes                                                                                                    u:object_r:proc_dirty_bytes:s0
-genfscon proc /sys/vm/dirty_background_bytes                                                                                         u:object_r:proc_dirty_background_bytes:s0
-
-####################################
 # Sysfs
 #
 
