@@ -31,6 +31,7 @@ $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio@6.0-impl:32 \
+    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     android.hidl.allocator@1.0.vendor \
@@ -39,7 +40,10 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudioroute \
     libtinyalsa \
-    libtinycompress
+    libtinycompress \
+    libaudioroute.vendor \
+    libprocessgroup.vendor \
+    libstagefright_softomx_plugin.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
