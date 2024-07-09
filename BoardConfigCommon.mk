@@ -64,6 +64,8 @@ BOARD_MKBOOTIMG_ARGS := \
 
 ## Camera
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
 
 # Dynamic Partitions
 BOARD_SUPER_PARTITION_SIZE := 11429478400
@@ -120,13 +122,6 @@ TARGET_KEYMASTER_VARIANT := samsung
 #TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
 #TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
 #TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
-### CAMERA
-SOONG_CONFIG_NAMESPACES += exynos2100CameraVars
-SOONG_CONFIG_exynos2100CameraVars += \
-    exynos2100_model
-
-SOONG_CONFIG_exynos2100CameraVars_exynos2100_model := $(TARGET_DEVICE)
 
 ## Manifest
 # HIDL
