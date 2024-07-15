@@ -75,7 +75,7 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
             sed -i 's/_ZN7android6Thread3runEPKcim/_ZN7utils326Thread3runEPKcim/g' "${2}"
             ;;
-        vendor/bin/hw/rild)
+        vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
             "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
             ;;
         vendor/lib/soundfx/libaudioeffectoffload.so | vendor/lib64/soundfx/libaudioeffectoffload.so)
