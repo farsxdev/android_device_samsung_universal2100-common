@@ -78,13 +78,6 @@ function blob_fixup() {
         vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
             "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
             ;;
-        vendor/lib/soundfx/libaudioeffectoffload.so | vendor/lib64/soundfx/libaudioeffectoffload.so)
-	    "$PATCHELF" --replace-needed libtinyalsa.so libtinyalsa.exynos2100.so "$2"
-	    ;;
-	vendor/lib/hw/audio.primary.exynos2100.so)
-	    "$PATCHELF" --replace-needed libaudioroute.so libaudioroute.exynos2100.so "$2"
-            "$PATCHELF" --replace-needed libtinyalsa.so libtinyalsa.exynos2100.so "$2"
-            ;;
     esac
 }
 
